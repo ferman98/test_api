@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.ferman.myapplication.databinding.ActivityMainBinding
 import com.ferman.myapplication.model.Response
+import com.ferman.myapplication.model.ResponseItem
 import com.ferman.myapplication.model.Status
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getData() {
-        vm.getDatas().observe(this) {
+        vm.getDatas(this).observe(this) {
             when (it) {
                 Status.Failed -> {
                     binding.tvMain.text = "GAGAL ..."
@@ -36,8 +37,8 @@ class MainActivity : AppCompatActivity() {
                     binding.tvMain.text = "LOADING ..."
                 }
                 is Status.Success<*> -> {
-                    if(it.data is Response) {
-                        binding.tvMain.text = it.data.toString()
+                    (it.data as? List<ResponseItem>)?.also { res ->
+                        binding.tvMain.text = res.toString()
                     }
                 }
             }
