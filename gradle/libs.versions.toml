@@ -1,0 +1,38 @@
+[versions]
+agp = "8.2.1"
+kotlin = "1.9.22"
+core-ktx = "1.10.1"
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+appcompat = "1.6.1"
+material = "1.9.0"
+constraintlayout = "2.1.4"
+retrofit = "2.9.0"
+androidXNavigation = "2.6.0"
+androidXLifecycle = "2.6.1"
+
+[libraries]
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# Jetpack
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "androidXNavigation" }
+androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "androidXNavigation" }
+androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "androidXLifecycle" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidXLifecycle" }
+
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+google-gson = { group = "com.google.code.gson", name = "gson", version = "2.10.1" }
+okhttp-chucker = { group = "com.github.chuckerteam.chucker", name = "library", version = "4.0.0" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
