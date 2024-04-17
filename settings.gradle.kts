@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Application"
 include(":app")
+include(":library:app-config")
+include(":library:app-config-internal")

@@ -1,0 +1,6 @@
+[submodule "library/app-config-internal"]
+	path = library/app-config-internal
+	url = https://github.com/ferman98/app-config-internal.git
+[submodule "library/app-config"]
+	path = library/app-config
+	url = https://github.com/ferman98/app-config.git

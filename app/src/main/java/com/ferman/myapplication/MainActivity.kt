@@ -3,12 +3,14 @@ package com.ferman.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import co.id.ist.appconfig.AppConfig
+import co.id.ist.appconfig.AppConfigActivity
 import com.ferman.myapplication.databinding.ActivityMainBinding
 import com.ferman.myapplication.model.Response
 import com.ferman.myapplication.model.ResponseItem
 import com.ferman.myapplication.model.Status
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppConfigActivity() {
 
     val vm : MainViewModel by viewModels()
 
