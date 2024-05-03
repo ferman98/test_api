@@ -1,18 +1,15 @@
 package com.ferman.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import co.id.ist.appconfig.AppConfig
 import co.id.ist.appconfig.AppConfigActivity
 import com.ferman.myapplication.databinding.ActivityMainBinding
-import com.ferman.myapplication.model.Response
 import com.ferman.myapplication.model.ResponseItem
 import com.ferman.myapplication.model.Status
 
 class MainActivity : AppConfigActivity() {
 
-    val vm : MainViewModel by viewModels()
+    val vm: MainViewModel by viewModels()
 
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
@@ -35,9 +32,11 @@ class MainActivity : AppConfigActivity() {
                 Status.Failed -> {
                     binding.tvMain.text = "GAGAL ..."
                 }
+
                 Status.Loading -> {
                     binding.tvMain.text = "LOADING ..."
                 }
+
                 is Status.Success<*> -> {
                     (it.data as? List<ResponseItem>)?.also { res ->
                         binding.tvMain.text = res.toString()
